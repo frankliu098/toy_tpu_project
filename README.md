@@ -22,13 +22,11 @@ The systolic array was chosen because it simplifies matrix multiplication by dis
 
 ### What I Learned About Verilog
 
-While working on this project, I learned how to handle **synchronous design** and how to use the clock signal to keep all the PEs in sync. This was important to make sure data moved through the systolic array correctly. I also had to figure out the difference between **blocking** (`=`) and **non-blocking assignments** (`<=`). Understanding when to use each one was key to avoiding bugs, especially in handling sequential logic across multiple clock cycles.
+While working on this project, I learned how to handle synchronous design and how to use the clock signal to keep all the PEs in sync. This was important to make sure data moved through the systolic array correctly. I also had to figure out the difference between blocking (`=`) and non-blocking assignments (`<=`). Understanding when to use each one was key to avoiding bugs, especially in handling sequential logic across multiple clock cycles.
 
-I also got a better understanding of **modularity** and **parameterization** in Verilog. By writing the PE as a reusable module and making the array size configurable, I was able to easily scale the design without rewriting everything. Finally, writing the **testbench** helped me learn how to simulate the array, feed it inputs, and verify the results.
+I also got a better understanding of modularity and parameterization in Verilog. By writing the PE as a reusable module and making the array size configurable, I was able to easily scale the design without rewriting everything. Finally, writing the testbench helped me learn how to simulate the array, feed it inputs, and verify the results.
 
 ### Running the Simulation
-
-The testbench simulates the systolic array by feeding in two 2x2 matrices over several clock cycles and checking the output. You can adjust the size of the array by modifying the `N` parameter in the systolic array module to handle larger matrices.
 
 To run the simulation, simply execute the following command:
 
